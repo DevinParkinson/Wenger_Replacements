@@ -1,0 +1,20 @@
+<h1>Add A New Candidate</h1>
+<%= form_for @replacement do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :age %>
+  <%= f.select :age, %w(25..65) %>
+
+  <%= f.label :experience %>
+  <%= f.text_field :experience %>
+
+  <%= f.label :rating %>
+  <%= f.select :rating, %w(1..10) %>
+
+  <%= f.label :likelihood %>
+  <%= f.select :likelihood, %w(1..10) %>
+
+  <%= f.submit %>
+
+<% end %>

@@ -1,0 +1,13 @@
+<h1 class="center-text"> Possible Wenger Replacements </h1>
+<img src="https://www.telegraph.co.uk/content/dam/football/2017/03/20/JS123808031_PA_Arsene-Wenger-File-Photo_trans_NvBQzQNjv4BqXZ2jEgyBj9XFFmv3X1XdDMVTRQP8z34z_-y55ik125I.jpg?imwidth=1400" style="width: 480px; height: 300px;" />
+<h3>
+All Things Must Come To An End, Wenger Out!
+</h3>
+<p>
+  Here are a list of possible replacements and their credentials for taking over for Arsene.
+</p>
+<% @replacements.each do |replacement| %>
+  <h2><%= replacement.name %></h2>
+  <%= link_to 'Credentials', replacement_path(replacement) %>
+  <% end %>
+  <p><%= link_to 'Enter a New Candidate', new_replacement_path %></p>
