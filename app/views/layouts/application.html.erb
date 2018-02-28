@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WengerReplacements</title>
+    <title>Wenger Replacements</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="font-family: ff-meta-web-pro; background-color: #f40d0d;">
+    <%= render 'layouts/navbar' %>
     <%= yield %>
   </body>
 </html>

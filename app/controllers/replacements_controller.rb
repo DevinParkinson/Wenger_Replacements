@@ -20,6 +20,25 @@ class ReplacementsController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @replacement = Replacement.find(params[:id])
+  end
+
+  def update
+    @replacement = Replacement.find(params[:id])
+
+    if @replacement.update(replacement_params)
+      redirect_to replacements_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    Replacement.find(params[:id]).destroy
+    redirect_to replacements_path
+  end
 end
 
 private
